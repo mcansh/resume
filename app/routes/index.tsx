@@ -9,8 +9,8 @@ const meta: MetaFunction = () => {
 
 const IndexPage: React.VFC = () => {
   return (
-    <div className="px-4 py-4 mx-auto max-w-prose">
-      <header className="flex items-center pb-2 mb-2 space-x-4 space-y-1 border-b-2 border-yellow-500 border-solid">
+    <div className="py-4 mx-auto max-w-prose">
+      <header className="flex items-center px-4 pb-2 mb-2 space-x-4 space-y-1 border-b-2 border-yellow-500 border-solid">
         <img
           src="https://avatars.githubusercontent.com/u/11698668?s=320&u=14a201dea37b6bdabaccd76ff4e2664b8e337052&v=4"
           className="w-40 h-40 rounded-full"
@@ -22,7 +22,7 @@ const IndexPage: React.VFC = () => {
         </div>
       </header>
 
-      <div className="space-y-8">
+      <div className="px-4 space-y-8">
         <div>
           <h2 className="text-2xl font-semibold">Skills</h2>
           <ul className="flex flex-wrap gap-2">

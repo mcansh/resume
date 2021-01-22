@@ -1,0 +1,7 @@
+.vercel
+node_modules
+public/build
+build
+app/**/*.css
+.ds_store
+app-build

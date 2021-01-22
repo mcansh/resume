@@ -2,7 +2,7 @@
 remix-starter-architect
 
 @http
-any /\*
+any /*
 
 @static
 

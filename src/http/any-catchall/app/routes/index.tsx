@@ -63,11 +63,12 @@ const IndexPage: React.VFC = () => {
         <div className="px-4 space-y-8">
           <div>
             <h2 className="text-2xl font-semibold">Skills</h2>
-            <ul className="flex flex-wrap gap-2">
+            {/* thanks safari */}
+            <ul className="flex flex-row flex-wrap -mx-1">
               {skills.map((skill) => (
                 <li
                   key={skill}
-                  className="px-2 py-1 tracking-wide text-white bg-indigo-600 rounded"
+                  className="px-2 py-1 m-1 tracking-wide text-white bg-indigo-600 rounded-md"
                 >
                   {skill}
                 </li>
@@ -81,10 +82,9 @@ const IndexPage: React.VFC = () => {
                 <div>
                   <h3 className="text-lg font-medium">Powerley</h3>
                   <span className="block">Web Developer</span>
-                  <time dateTime={new Date(2016, 4, 4).toISOString()}>
+                  <time dateTime="2016-05-04T00:00:00.000Z">
                     May 2016
-                  </time>{" "}
-                  - <time dateTime={data.date}>Present</time>
+                  </time> - <time dateTime={data.date}>Present</time>
                   <ul className="pl-6 list-disc">
                     <li>First member of the web team</li>
                     <li>

@@ -16,7 +16,7 @@ const loader: Loader = () => {
 const headers: HeadersFunction = () => {
   return {
     "cache-control": "max-age=600, s-maxage=600",
-    "x-hello-recruiters": "👋",
+    "x-hello-recruiters": "1",
   };
 };
 

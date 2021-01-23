@@ -11,7 +11,8 @@
     "build": "remix build",
     "start": "node index.js",
     "lint": "eslint --fix --cache --ext js,jsx,ts,tsx,mdx .",
-    "clean": "del app-build build public/build app/**/*.css"
+    "clean": "del app-build build public/build app/**/*.css",
+    "deploy": "npm run clean && npm run build && vc"
   },
   "dependencies": {
     "@remix-run/cli": "0.9.1",
@@ -31,7 +32,6 @@
     "@types/react-dom": "^17.0.0",
     "@vercel/node": "1.9.0",
     "autoprefixer": "10.2.3",
-    "concurrently": "^5.3.0",
     "del-cli": "3.0.1",
     "eslint": "7.18.0",
     "husky": "4.3.8",

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("react/jsx-runtime");exports.default=()=>e.jsx("div",{children:e.jsx("h1",{children:"404"})}),exports.meta=()=>({title:"Ain't nothing here"});

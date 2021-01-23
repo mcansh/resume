@@ -1,12 +1,9 @@
 module.exports = {
   apps: [
     {
-      name: 'Arc',
-      script: 'cd ../../../ && arc sandbox',
+      name: 'Vercel',
+      script: 'vc dev',
       ignore_watch: ['.'],
-      env: {
-        NODE_ENV: 'development',
-      },
     },
     {
       name: 'Remix',

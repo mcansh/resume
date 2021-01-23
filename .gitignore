@@ -1,3 +1,8 @@
-public/build
 .ds_store
 node_modules
+app/**/*.css
+build
+public/build
+.eslintcache
+.vercel
+app-build

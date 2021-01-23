@@ -1,36 +1,30 @@
-import { HeadersFunction, MetaFunction } from "@remix-run/core";
-import { Loader } from "@remix-run/data";
-import { useRouteData } from "@remix-run/react";
+import type { HeadersFunction, MetaFunction } from '@remix-run/core';
+import type { Loader } from '@remix-run/data';
+import { useRouteData } from '@remix-run/react';
 
-const meta: MetaFunction = () => {
-  return {
-    title: "Resume | Logan McAnsh",
-    description: "My Resume",
-  };
-};
+const meta: MetaFunction = () => ({
+  title: 'Resume | Logan McAnsh',
+  description: 'My Resume',
+});
 
-const loader: Loader = () => {
-  return { date: new Date() };
-};
+const loader: Loader = () => ({ date: new Date() });
 
-const headers: HeadersFunction = () => {
-  return {
-    "cache-control": "max-age=600, s-maxage=600",
-    "x-hello-recruiters": "1",
-  };
-};
+const headers: HeadersFunction = () => ({
+  'cache-control': 'max-age=600, s-maxage=600',
+  'x-hello-recruiters': '1',
+});
 
 const skills: Array<string> = [
-  "Node.js",
-  "Rest APIs",
-  "GraphQL",
-  "React",
-  "Next.js",
-  "Remix Run",
-  "TypeScript",
-  "TailwindCSS",
-  "Accessibility",
-  "Performance",
+  'Node.js',
+  'Rest APIs',
+  'GraphQL',
+  'React',
+  'Next.js',
+  'Remix Run',
+  'TypeScript',
+  'TailwindCSS',
+  'Accessibility',
+  'Performance',
 ];
 
 interface LoaderData {
@@ -65,7 +59,7 @@ const IndexPage: React.VFC = () => {
             <h2 className="text-2xl font-semibold">Skills</h2>
             {/* thanks safari */}
             <ul className="flex flex-row flex-wrap -mx-1">
-              {skills.map((skill) => (
+              {skills.map(skill => (
                 <li
                   key={skill}
                   className="px-2 py-1 m-1 tracking-wide text-white bg-indigo-600 rounded-md"

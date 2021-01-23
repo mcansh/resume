@@ -1,3 +1,3 @@
-const { createRequestHandler } = require("@remix-run/architect");
+const { createRequestHandler } = require('@remix-run/architect');
 
 exports.handler = createRequestHandler();

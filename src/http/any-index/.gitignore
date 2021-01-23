@@ -1,0 +1,6 @@
+.ds_store
+node_modules
+public/build
+build
+app/**/*.css
+.eslintcache

@@ -33,7 +33,7 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => (
       />
       <Styles />
     </head>
-    <body className="grid h-full p-4 mx-auto font-mono text-center text-white max-w-prose place-items-center bg-blue-screen">
+    <body className="grid p-4 mx-auto font-mono text-center text-white max-w-prose place-items-center bg-blue-screen">
       <div className="space-y-4">
         <h1 className="inline-block py-1 text-4xl font-semibold bg-white text-blue-screen">
           Uncaught Exception!
@@ -42,7 +42,7 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => (
           If you are not the developer, please click back in your browser and
           try again.
         </p>
-        <pre className="py-2 border-4 border-white border-solid">
+        <pre className="py-2 whitespace-pre-wrap border-4 border-white border-solid">
           {error.message}
         </pre>
         <p>

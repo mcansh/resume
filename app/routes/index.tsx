@@ -25,6 +25,8 @@ const skills: Array<string> = [
   'TailwindCSS',
   'Accessibility',
   'Performance',
+  'ES2015+',
+  'Git',
 ];
 
 interface LoaderData {
@@ -74,16 +76,19 @@ const IndexPage: React.VFC = () => {
             <ul className="pl-6">
               <li>
                 <div>
-                  <h3 className="text-lg font-medium">Powerley</h3>
-                  <span className="block">Web Developer</span>
-                  <time dateTime="2016-05-04T00:00:00.000Z">
-                    May 2016
-                  </time> - <time dateTime={data.date}>Present</time>
+                  <h3 className="text-xl font-medium">Powerley</h3>
+                  <span>
+                    <span className="text-lg">Web Developer</span>
+                    {' | '}
+                    <time dateTime="2016-05-04T00:00:00.000Z">
+                      May 2016
+                    </time> - <time dateTime={data.date}>Present</time>
+                  </span>
                   <ul className="pl-6 list-disc">
                     <li>First member of the web team</li>
                     <li>
                       Created and maintained a suite of white label web
-                      experiences included in our mobile apps
+                      experiences included in our mobile apps for 7+ clients.
                     </li>
                     <li>
                       Implemented a suite of utility functions used across our

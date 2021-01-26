@@ -8,6 +8,10 @@ const App: React.VFC = () => (
         name="viewport"
         content="width=device-width, initial-scale=1.0, viewport-fit=cover"
       />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="alternate icon" href="/favicon.ico" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4F46E5" />
       <Meta />
       <Styles />
     </head>
@@ -31,6 +35,10 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => (
         name="viewport"
         content="width=device-width, initial-scale=1.0, viewport-fit=cover"
       />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="alternate icon" href="/favicon.ico" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4F46E5" />
       <Styles />
     </head>
     <body className="grid p-4 mx-auto font-mono text-center text-white max-w-prose place-items-center bg-blue-screen">

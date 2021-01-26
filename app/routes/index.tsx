@@ -27,6 +27,7 @@ const skills: Array<string> = [
   'Performance',
   'ES2015+',
   'Git',
+  'Automated Testing',
 ];
 
 interface LoaderData {

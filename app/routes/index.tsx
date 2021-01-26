@@ -73,16 +73,16 @@ const IndexPage: React.VFC = () => {
           </div>
           <div>
             <h2 className="text-2xl font-semibold">Experience</h2>
-            <ul className="pl-6">
+            <ul>
               <li>
                 <div>
                   <h3 className="text-xl font-medium">Powerley</h3>
                   <span>
-                    <span className="text-lg">Web Developer</span>
-                    {' | '}
-                    <time dateTime="2016-05-04T00:00:00.000Z">
-                      May 2016
-                    </time> - <time dateTime={data.date}>Present</time>
+                    <span className="block text-lg sm:mr-2 sm:inline-block">
+                      Web Developer
+                    </span>
+                    <time dateTime="2016-05-04T00:00:00.000Z">May 2016</time> -{' '}
+                    <time dateTime={data.date}>Present</time>
                   </span>
                   <ul className="pl-6 list-disc">
                     <li>First member of the web team</li>

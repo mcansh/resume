@@ -87,12 +87,12 @@ const IndexPage: React.VFC = () => {
                   <ul className="pl-6 list-disc">
                     <li>First member of the web team</li>
                     <li>
-                      Created and maintained a suite of white label web
+                      Created and maintained a suite of white label web app
                       experiences included in our mobile apps for 7+ clients.
                     </li>
                     <li>
                       Implemented a suite of utility functions used across our
-                      web app experiences
+                      web experiences
                     </li>
                     <li>Designed Sketch plugins</li>
                   </ul>

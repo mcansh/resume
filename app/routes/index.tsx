@@ -76,29 +76,45 @@ const IndexPage: React.VFC = () => {
             <h2 className="text-2xl font-semibold">Experience</h2>
             <ul>
               <li>
-                <div>
-                  <h3 className="text-xl font-medium">Powerley</h3>
-                  <span>
-                    <span className="block text-lg sm:mr-2 sm:inline-block">
-                      Web Developer
+                <div className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-medium">Powerley</h3>
+                    <span>
+                      <span className="block text-lg sm:mr-2 sm:inline-block">
+                        Web Developer
+                      </span>
+                      <time dateTime="2016-05-04T00:00:00.000Z">May 2016</time>{' '}
+                      - <time dateTime={data.date}>Present</time>
                     </span>
-                    <time dateTime="2016-05-04T00:00:00.000Z">May 2016</time> -{' '}
-                    <time dateTime={data.date}>Present</time>
-                  </span>
-                  <ul className="pl-6 list-disc">
-                    <li>First member of the web team</li>
-                    <li>
-                      Created and maintained a suite of white label web app
-                      experiences included in our mobile apps for 7+ clients.
-                    </li>
-                    <li>
-                      Implemented a suite of utility functions used across our
-                      web experiences
-                    </li>
-                    <li>Designed Sketch plugins</li>
-                  </ul>
+                    <ul className="pl-6 list-disc">
+                      <li>First member of the web team</li>
+                      <li>
+                        Created and maintained a suite of modern white label web
+                        applications with Next.js to be included in our mobile
+                        apps for 7+ clients.
+                      </li>
+                      <li>
+                        Implemented a suite of utility functions used across our
+                        web experiences
+                      </li>
+                      <li>Designed Sketch plugins</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Key achievement:</h4>
+                    <p>
+                      Quickly became the second most used feature of our app
+                      behind the page your dropped in at after logging in.
+                    </p>
+                  </div>
                 </div>
               </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold">Certificates</h2>
+            <ul className="pl-6 list-disc">
+              <li>CIW Web Development Professional</li>
             </ul>
           </div>
         </div>

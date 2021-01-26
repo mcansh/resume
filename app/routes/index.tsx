@@ -104,7 +104,8 @@ const IndexPage: React.VFC = () => {
                     <h4 className="font-medium">Key achievement:</h4>
                     <p>
                       Quickly became the second most used feature of our app
-                      behind the page your dropped in at after logging in.
+                      behind the page you&apos;re dropped in at after logging
+                      in.
                     </p>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ const meta: MetaFunction = () => ({
 const loader: Loader = () => ({ date: new Date() });
 
 const headers: HeadersFunction = () => ({
-  'cache-control': 'max-age=600, s-maxage=600',
+  'cache-control': 'max-age=600',
   'x-hello-recruiters': '1',
 });
 

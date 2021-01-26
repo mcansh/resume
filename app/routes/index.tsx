@@ -92,7 +92,7 @@ const IndexPage: React.VFC = () => {
                     </li>
                     <li>
                       Implemented a suite of utility functions used across our
-                      web experiences
+                      web app experiences
                     </li>
                     <li>Designed Sketch plugins</li>
                   </ul>

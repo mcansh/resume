@@ -1,3 +1,4 @@
+import * as React from 'react';
 import type { HeadersFunction, MetaFunction } from '@remix-run/core';
 import type { Loader } from '@remix-run/data';
 import { useRouteData } from '@remix-run/react';
@@ -36,6 +37,19 @@ interface LoaderData {
 
 const IndexPage: React.VFC = () => {
   const data = useRouteData<LoaderData>();
+
+  React.useEffect(() => {
+    const redirectToPDF = (event: KeyboardEvent) => {
+      if (event.metaKey && event.key === 'p') {
+        event.preventDefault();
+        window.location.assign('/resume.pdf');
+      }
+    };
+
+    document.addEventListener('keydown', redirectToPDF);
+
+    return () => document.removeEventListener('keydown', redirectToPDF);
+  });
 
   return (
     <div className="h-full border-t-8 border-indigo-600 border-solid">

@@ -114,7 +114,9 @@ const IndexPage: React.VFC = () => {
           <div>
             <h2 className="text-2xl font-semibold">Certificates</h2>
             <ul className="pl-6 list-disc">
-              <li>CIW Web Development Professional</li>
+              <li>CIW Internet Business Associate (2014)</li>
+              <li>CIW Web Site Development Associate (2015)</li>
+              <li>Testing JavaScript (2019)</li>
             </ul>
           </div>
         </div>

@@ -59,6 +59,17 @@ const IndexPage: React.VFC = () => {
 
         <div className="px-4 space-y-8">
           <div>
+            <h2 className="text-2xl font-semibold">Summary</h2>
+            <p>
+              Experienced Full Stack Web Developer, primarily using React and
+              Node.js.{' '}
+              <span className="block">
+                Self taught with experience working solo and with a team, both
+                in person and remote settings.
+              </span>
+            </p>
+          </div>
+          <div>
             <h2 className="text-2xl font-semibold">Skills</h2>
             {/* safari doesn't support gap on flex containers, so we need to add a margin to each flex child and set a negative margin on the parent */}
             <ul className="flex flex-row flex-wrap -mx-1">

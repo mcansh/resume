@@ -91,7 +91,8 @@ const IndexPage: React.VFC = () => {
                       <li>
                         Created and maintained a suite of modern white label web
                         applications with Next.js to be included in our mobile
-                        apps for 7+ clients.
+                        apps for 7+ clients, which quickly became the second
+                        most used area of the app
                       </li>
                       <li>
                         Implemented a suite of utility functions used across our
@@ -99,14 +100,6 @@ const IndexPage: React.VFC = () => {
                       </li>
                       <li>Designed Sketch plugins</li>
                     </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Key achievement:</h4>
-                    <p>
-                      Quickly became the second most used feature of our app
-                      behind the page you&apos;re dropped in at after logging
-                      in.
-                    </p>
                   </div>
                 </div>
               </li>

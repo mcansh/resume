@@ -19,6 +19,7 @@ const App: React.VFC = () => (
     <body>
       <Outlet />
       <Scripts />
+      <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="ODQQEOWK" defer />
     </body>
   </html>
 );

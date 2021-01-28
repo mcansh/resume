@@ -1,5 +1,8 @@
 import { Meta, Scripts, Styles } from '@remix-run/react';
-import { Outlet } from 'react-router';
+
+import IndexPage from './routes';
+// import { Outlet } from 'react-router-dom';
+export { loader, headers, meta } from './routes';
 
 const App: React.VFC = () => (
   <html lang="en">
@@ -17,7 +20,8 @@ const App: React.VFC = () => (
       <Styles />
     </head>
     <body>
-      <Outlet />
+      {/* <Outlet /> */}
+      <IndexPage />
       <Scripts />
     </body>
   </html>

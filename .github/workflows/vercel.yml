@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy-preview
-        if: github.event_name == 'pull_request_target'
+        if: github.event_name == 'pull_request'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

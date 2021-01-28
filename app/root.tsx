@@ -1,4 +1,5 @@
-import { Meta, Scripts, Styles, Routes } from '@remix-run/react';
+import { Meta, Scripts, Styles } from '@remix-run/react';
+import { Outlet } from 'react-router-dom';
 
 const App: React.VFC = () => (
   <html lang="en">
@@ -16,7 +17,7 @@ const App: React.VFC = () => (
       <Styles />
     </head>
     <body>
-      <Routes />
+      <Outlet />
       <Scripts />
     </body>
   </html>
@@ -64,4 +65,5 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => (
   </html>
 );
 
-export { App, ErrorBoundary };
+export default App;
+export { ErrorBoundary };

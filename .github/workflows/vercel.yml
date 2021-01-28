@@ -1,11 +1,21 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.7.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Install and cache dependencies
       - uses: actions/checkout@v2
       - uses: actions/cache@v1
         with:
@@ -13,14 +23,16 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: build
+
+      - name: Build Remix App
         run: |
           npm ci
           npm run build
         env:
           REMIX_REGISTRY_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
-      - uses: amondnet/vercel-action@v20
+      - name: Deploy Preview
+        uses: amondnet/vercel-action@v20
         id: vercel-deploy-preview
         if: github.event_name == 'pull_request'
         with:
@@ -33,7 +45,8 @@ jobs:
             staging.resume.mcan.sh
             pr-{{PR_NUMBER}}.resume.mcan.sh
 
-      - uses: amondnet/vercel-action@v20
+      - name: Deploy Production
+        uses: amondnet/vercel-action@v20
         id: vercel-deploy-production
         if: github.event_name == 'push'
         with:

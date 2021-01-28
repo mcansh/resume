@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   deploy:
@@ -17,6 +17,8 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+          REMIX_REGISTRY_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
       - uses: amondnet/vercel-action@v20
         id: vercel-deploy-preview

@@ -69,7 +69,7 @@ const IndexPage: React.VFC = () => {
             }}
           />
           <div>
-            <h1 className="text-4xl font-semibold">Logan Steele McAnsh</h1>
+            <h1 className="text-4xl font-semibold">Logan McAnsh</h1>
             <a
               className="transition-colors duration-75 ease-in-out text-blueGray-600 hover:text-blueGray-300"
               href="mailto:logan+resume@mcan.sh"

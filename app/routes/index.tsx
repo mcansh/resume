@@ -2,6 +2,7 @@ import * as React from 'react';
 import type { HeadersFunction, MetaFunction } from '@remix-run/core';
 import type { Loader } from '@remix-run/data';
 import { useRouteData } from '@remix-run/react';
+import avatar from 'img:../11698668.jpg?srcset=128,160,256,320&quality=80&placeholder';
 
 const meta: MetaFunction = () => ({
   title: 'Resume | Logan McAnsh',
@@ -56,9 +57,16 @@ const IndexPage: React.VFC = () => {
       <div className="py-4 mx-auto max-w-prose">
         <header className="flex flex-col items-center px-4 pb-2 mb-2 space-x-4 space-y-1 text-center sm:flex-row sm:text-left">
           <img
-            src="https://avatars.githubusercontent.com/u/11698668?s=320&u=14a201dea37b6bdabaccd76ff4e2664b8e337052&v=4"
+            src={avatar.src}
+            srcSet={avatar.srcset}
             className="w-32 h-32 rounded-full sm:w-40 sm:h-40"
             alt="Logan McAnsh"
+            width={avatar.width}
+            height={avatar.height}
+            style={{
+              backgroundImage: avatar.placeholder,
+              backgroundSize: 'cover',
+            }}
           />
           <div>
             <h1 className="text-4xl font-semibold">Logan McAnsh</h1>

@@ -64,7 +64,7 @@ const IndexPage: React.VFC = () => {
             width={avatar.width}
             height={avatar.height}
             style={{
-              backgroundImage: avatar.placeholder,
+              backgroundImage: `url(${avatar.placeholder})`,
               backgroundSize: 'cover',
             }}
           />

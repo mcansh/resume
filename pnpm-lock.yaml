@@ -1,9 +1,9 @@
 dependencies:
-  '@remix-run/cli': 0.10.3_react-dom@17.0.1+react@17.0.1
-  '@remix-run/core': 0.10.3_react-dom@17.0.1+react@17.0.1
-  '@remix-run/data': 0.10.3_react-dom@17.0.1+react@17.0.1
-  '@remix-run/react': 0.10.3_react-dom@17.0.1+react@17.0.1
-  '@remix-run/vercel': 0.10.3_a4a6b9ba45739ca9b180d89dbb6783ce
+  '@remix-run/cli': 0.10.4_react-dom@17.0.1+react@17.0.1
+  '@remix-run/core': 0.10.4_react-dom@17.0.1+react@17.0.1
+  '@remix-run/data': 0.10.4_react-dom@17.0.1+react@17.0.1
+  '@remix-run/react': 0.10.4_react-dom@17.0.1+react@17.0.1
+  '@remix-run/vercel': 0.10.4_a4a6b9ba45739ca9b180d89dbb6783ce
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
   react-router: 6.0.0-beta.0_react@17.0.1
@@ -1301,9 +1301,9 @@ packages:
     dev: true
     resolution:
       integrity: sha512-SBuYsh+o35knItbRW97vl5/5nEc5c5DYP7PxjyPLOfmm9bMaDsVeATXjXMBy6+KLlyrYWHZxGbfXe003NnHClg==
-  /@remix-run/cli/0.10.3_react-dom@17.0.1+react@17.0.1:
+  /@remix-run/cli/0.10.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
-      '@remix-run/core': 0.10.3_react-dom@17.0.1+react@17.0.1
+      '@remix-run/core': 0.10.4_react-dom@17.0.1+react@17.0.1
       meow: 7.1.1
     dev: false
     hasBin: true
@@ -1311,9 +1311,9 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-OjI3SutygEqVDQQBGg5KAwW5RtYqMzQe2JOvZn27Qu8RRlPSK2xsIZ8yq+nfak+L+FIMPunpMdoC7NacVDKv7g==
-      tarball: download/@remix-run/cli/0.10.3/863627de8909b44512d0511ac618747d6799d003127205bb4de8a3c0e4f68598
-  /@remix-run/core/0.10.3_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-ZrNW+CWjSCszViVS/UQQ2eSgMBRFQp+uLlT4aGZ5LNeubu9B/XaV3We1ieeDhXo/6+vC/GYxruEWoxHXHmQjmg==
+      tarball: download/@remix-run/cli/0.10.4/c77e33e5d59891977d908d78d1cb88dd9d9e41db92c19c1638f493e80547e7d8
+  /@remix-run/core/0.10.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@babel/core': 7.12.10
       '@babel/preset-env': 7.12.11_@babel+core@7.12.10
@@ -1348,19 +1348,19 @@ packages:
       react: '>=16.8'
       react-dom: '>=16.8'
     resolution:
-      integrity: sha512-ys5e9j+oI6JepD+GPtujQ8XhNkYkL3NRqTf8GdyZingss4ohJUPf6ZzU7h+cZnLo1LIRlXeFwbXPY6Z8NJRwZA==
-      tarball: download/@remix-run/core/0.10.3/c4a1277128ba4e0899322dbd2c39943af4060ece8a25b5a8d60c867f5feef017
-  /@remix-run/data/0.10.3_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-+tK27zbXxsuhzhlhXzuE1sGmMTZQ7vIUFdpVTv0VNWF9SZ2bcrjjrwCfjs82lpZr/GRHBcGaSpLbW5DLv75Wiw==
+      tarball: download/@remix-run/core/0.10.4/2082bd3498db8e5847e2a94a80faddd01c6d57e0d07b8caa3e5fede9955a774b
+  /@remix-run/data/0.10.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
-      '@remix-run/core': 0.10.3_react-dom@17.0.1+react@17.0.1
+      '@remix-run/core': 0.10.4_react-dom@17.0.1+react@17.0.1
     dev: false
     peerDependencies:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-e4ChQBYAQCvdKO4kYw6RMkctf24JykH9TkWN1sgS5Vl5enOcqU8a1Ab/RcZRMnvrlJWT37c46OuWZPD4Ym7lkQ==
-      tarball: download/@remix-run/data/0.10.3/33a9c8ab8522770778efcd1a747586ed7716d80ae478057527ee78c2db74cb10
-  /@remix-run/react/0.10.3_react-dom@17.0.1+react@17.0.1:
+      integrity: sha512-ZrIg5p/qFs4TWbHkbmoz/40DPAGTzxJrQrEFZwgBnAoLyA+rIC9/rPIW2Y0kma6kcrDrdyMvjMHUrwKt40V8dw==
+      tarball: download/@remix-run/data/0.10.4/e517e3e359204d040cfcc851c28864e092e1bf33778df57a4b45909726fe21fc
+  /@remix-run/react/0.10.4_react-dom@17.0.1+react@17.0.1:
     dependencies:
       history: 5.0.0
       react: 17.0.1
@@ -1371,11 +1371,11 @@ packages:
       react: '>=16.8'
       react-dom: '>=16.8'
     resolution:
-      integrity: sha512-/RZXqTLLcM80/Bc+BFHs80BJTxCpb/4bEUEk8Q4lS+Tfshb9iYhk3bpm0GumNcZwwoewux5qDz9/hmFrbHcKXA==
-      tarball: download/@remix-run/react/0.10.3/85cc97d047c9c09e9e58bcd8f8ff30002ca5e182083832ef583e06519960c489
-  /@remix-run/vercel/0.10.3_a4a6b9ba45739ca9b180d89dbb6783ce:
+      integrity: sha512-Oumc9IP47rOWPrUOtXx/uRPDnrXAvrBEW9stJUg4xpXDobhUOxiKIfBPUqpT3KGITxB2hLB43yyXLfUKVhGlmA==
+      tarball: download/@remix-run/react/0.10.4/f83ba0bb6e66584ea3e472226a9f8f150cdfe225d9eda15eecdd65d02f9e4a64
+  /@remix-run/vercel/0.10.4_a4a6b9ba45739ca9b180d89dbb6783ce:
     dependencies:
-      '@remix-run/core': 0.10.3_react-dom@17.0.1+react@17.0.1
+      '@remix-run/core': 0.10.4_react-dom@17.0.1+react@17.0.1
       '@vercel/node': 1.9.0
     dev: false
     peerDependencies:
@@ -1383,8 +1383,8 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-s4GnZNZvaMSZDYGZoVpDp67ShjFaH4ssjwghMD9zosR79R76IJE04gx5is4DNMSsOpJdLj+qyNl175CiMlvZNA==
-      tarball: download/@remix-run/vercel/0.10.3/bebf5b0eae889fe0e8706c03edf168c167c1c0b08ab8e6d2ae8168863a9d3f41
+      integrity: sha512-9yWkdxJ75CqbebrftPHeMqSuvCrabw/BUiH5gqSpVoQXAG68i+TAy3DWl4izBPK7vU0+GGt+T60Y4bBro+6/6Q==
+      tarball: download/@remix-run/vercel/0.10.4/8feaedf198498d0cee5883918b20e23151ff1869d07613aa475b9827680771ba
   /@rollup/plugin-alias/3.1.1_rollup@2.38.0:
     dependencies:
       rollup: 2.38.0
@@ -8357,11 +8357,11 @@ packages:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
 specifiers:
   '@mcansh/eslint-config': 3.0.1
-  '@remix-run/cli': 0.10.3
-  '@remix-run/core': 0.10.3
-  '@remix-run/data': 0.10.3
-  '@remix-run/react': 0.10.3
-  '@remix-run/vercel': 0.10.3
+  '@remix-run/cli': 0.10.4
+  '@remix-run/core': 0.10.4
+  '@remix-run/data': 0.10.4
+  '@remix-run/react': 0.10.4
+  '@remix-run/vercel': 0.10.4
   '@types/node': 14.14.22
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0

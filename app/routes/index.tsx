@@ -6,7 +6,7 @@ import avatar from 'img:../11698668.jpg?srcset=128,160,256,320,384,480&quality=8
 
 const meta: MetaFunction = () => ({
   title: 'Resume | Logan McAnsh',
-  description: 'My Resume',
+  description: "Logan McAnsh's Resume",
 });
 
 const loader: Loader = () => ({ date: new Date() });
@@ -38,19 +38,6 @@ interface LoaderData {
 
 const IndexPage: React.VFC = () => {
   const data = useRouteData<LoaderData>();
-
-  React.useEffect(() => {
-    const redirectToPDF = (event: KeyboardEvent) => {
-      if (event.metaKey && event.key === 'p') {
-        event.preventDefault();
-        window.location.assign('/resume.pdf');
-      }
-    };
-
-    document.addEventListener('keydown', redirectToPDF);
-
-    return () => document.removeEventListener('keydown', redirectToPDF);
-  });
 
   return (
     <div className="h-full border-t-8 border-indigo-600 border-solid">
@@ -148,6 +135,22 @@ const IndexPage: React.VFC = () => {
           </div>
         </div>
       </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+// ready for your mind to be blown? this is a full react app built with Remix, but there is NO runtime javascript besides the below 7 lines to redirect to a PDF 😎
+
+const redirectToPDF = (event) => {
+  if (event.metaKey && event.key === 'p') {
+    event.preventDefault();
+    window.location.assign('/resume.pdf');
+  }
+};
+
+document.addEventListener('keydown', redirectToPDF);
+          `,
+        }}
+      />
     </div>
   );
 };

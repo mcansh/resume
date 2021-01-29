@@ -42,8 +42,8 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: .
           alias-domains: |
-            staging.resume.mcan.sh
-            pr-{{PR_NUMBER}}.resume.mcan.sh
+            staging.${{ secrets.VERCEL_DOMAIN }}
+            pr-{{PR_NUMBER}}.${{ secrets.VERCEL_DOMAIN }}
 
       - name: Deploy Production
         uses: amondnet/vercel-action@v20
@@ -56,4 +56,4 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: .
           vercel-args: '--prod'
-          alias-domains: resume.mcan.sh
+          alias-domains: ${{ secrets.VERCEL_DOMAIN }}

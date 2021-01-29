@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./app/**/*.{js,jsx,ts,tsx,md,mdx}', './remix.config.js'],
@@ -12,6 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        gray: colors.blueGray,
         blue: {
           screen: '#1000f2',
         },

@@ -6,7 +6,7 @@ function useFathom() {
   const location = useLocation();
 
   React.useEffect(() => {
-    Fathom.load('ODQQEOWK', {
+    Fathom.load(window.ENV.FATHOM_ANALYTICS, {
       includedDomains: ['resume.mcan.sh'],
     });
   }, []);

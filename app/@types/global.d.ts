@@ -5,3 +5,7 @@ declare namespace NodeJS {
     readonly FATHOM_ANALYTICS: string;
   }
 }
+
+interface Window {
+  ENV: NodeJS.ProcessEnv;
+}

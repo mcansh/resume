@@ -1,14 +1,19 @@
 import * as React from 'react';
-import { Meta, Scripts, Styles } from '@remix-run/react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Meta, Scripts, Styles, useRouteData } from '@remix-run/react';
+import { Outlet } from 'react-router-dom';
+import type { Loader } from '@remix-run/data';
 
 import { useFathom } from './hooks/use-fathom';
 
-const noScriptPaths = new Set(['/']);
+const loader: Loader = () => ({
+  env: {
+    FATHOM_ANALYTICS: process.env.FATHOM_ANALYTICS,
+  },
+});
 
 const App: React.VFC = () => {
-  const location = useLocation();
-  const includeScripts = !pagesWithoutJS.has(location.pathname);
+  const data = useRouteData();
+
   useFathom();
 
   return (
@@ -28,7 +33,14 @@ const App: React.VFC = () => {
       </head>
       <body>
         <Outlet />
-        {includeScripts && <Scripts />}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ENV = ${JSON.stringify(data.env)};
+            `,
+          }}
+        />
+        <Scripts />
       </body>
     </html>
   );
@@ -81,4 +93,4 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => {
 };
 
 export default App;
-export { ErrorBoundary };
+export { loader, ErrorBoundary };

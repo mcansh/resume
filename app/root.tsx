@@ -4,11 +4,11 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { useFathom } from './hooks/use-fathom';
 
-const pagesWithoutJS = new Set(['/']);
+const noScriptPaths = new Set(['/']);
 
 const App: React.VFC = () => {
   const location = useLocation();
-  const enableJS = !pagesWithoutJS.has(location.pathname);
+  const includeScripts = !pagesWithoutJS.has(location.pathname);
   useFathom();
 
   return (
@@ -28,7 +28,7 @@ const App: React.VFC = () => {
       </head>
       <body>
         <Outlet />
-        {enableJS && <Scripts />}
+        {includeScripts && <Scripts />}
       </body>
     </html>
   );

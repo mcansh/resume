@@ -43,22 +43,26 @@ const IndexPage: React.VFC = () => {
     <div className="h-full border-t-8 border-indigo-600 border-solid">
       <div className="py-4 mx-auto max-w-prose">
         <header className="flex flex-col items-center px-4 pb-2 mb-2 space-x-4 space-y-1 text-center sm:flex-row sm:text-left">
-          <img
-            src={avatar.src}
-            srcSet={avatar.srcset}
-            className="w-32 h-32 rounded-full sm:w-40 sm:h-40"
-            alt="Logan McAnsh"
-            width={avatar.width}
-            height={avatar.height}
-            style={{
-              backgroundImage: `url(${avatar.placeholder})`,
-              backgroundSize: 'cover',
-            }}
-          />
+          <div className="relative w-32 h-32 overflow-hidden rounded-full sm:w-40 sm:h-40">
+            <div
+              className="w-full h-full scale-125 bg-cover transform-gpu"
+              style={{
+                backgroundImage: `url(${avatar.placeholder})`,
+                filter: 'blur(8px)',
+              }}
+            />
+            <img
+              alt="Logan McAnsh"
+              src={avatar.src}
+              height={avatar.height}
+              width={avatar.width}
+              className="absolute top-0 left-0 w-full h-full"
+            />
+          </div>
           <div>
             <h1 className="text-4xl font-semibold">Logan McAnsh</h1>
             <a
-              className="transition-colors duration-75 ease-in-out text-blueGray-600 hover:text-blueGray-300"
+              className="text-gray-600 transition-colors duration-75 ease-in-out hover:text-gray-300"
               href="mailto:logan+resume@mcan.sh"
             >
               logan+resume@mcan.sh

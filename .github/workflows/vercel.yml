@@ -31,6 +31,11 @@ jobs:
         env:
           REMIX_REGISTRY_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch_name
+
       - name: Deploy Preview
         uses: amondnet/vercel-action@v20
         id: vercel-deploy-preview
@@ -42,8 +47,7 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: .
           alias-domains: |
-            staging.${{ secrets.VERCEL_DOMAIN }}
-            pr-{{PR_NUMBER}}.${{ secrets.VERCEL_DOMAIN }}
+            resume-${{steps.extract_branch_name.outputs.branch}}-${{github.actor}}.vercel.app
 
       - name: Deploy Production
         uses: amondnet/vercel-action@v20

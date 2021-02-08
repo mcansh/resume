@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'Vercel',
-      script: 'vc dev',
+      script: 'vc dev -l 4000',
       ignore_watch: ['.'],
     },
     {

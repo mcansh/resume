@@ -2,6 +2,7 @@ import * as React from 'react';
 import type { HeadersFunction, MetaFunction } from '@remix-run/core';
 import type { Loader } from '@remix-run/data';
 import { useRouteData } from '@remix-run/react';
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import avatar from 'img:../11698668.jpg?srcset=128,160,256,320,384,480&quality=80&placeholder';
 
 const meta: MetaFunction = () => ({
@@ -57,7 +58,7 @@ const IndexPage: React.VFC = () => {
         <header className="flex flex-col items-center px-4 pb-2 mb-2 space-x-4 space-y-1 text-center sm:flex-row sm:text-left">
           <div className="relative w-32 h-32 overflow-hidden rounded-full sm:w-40 sm:h-40">
             <div
-              className="w-full h-full scale-125 bg-cover transform-gpu"
+              className="w-full h-full scale-125 bg-cover"
               style={{
                 backgroundImage: `url(${avatar.placeholder})`,
                 filter: 'blur(8px)',

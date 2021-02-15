@@ -13,11 +13,24 @@ export default function handleRequest(
     <Remix context={remixContext} url={request.url} />
   );
 
+  const cspSettings = {
+    'default-src': ['none'],
+    'style-src': ["'self'", "'unsafe-inline'"],
+    'script-src': ["'self'", "'unsafe-inline'"],
+    'font-src': ["'self'"],
+    'img-src': ["'self'", 'data:'],
+  };
+
+  const csp = Object.entries(cspSettings)
+    .map(([key, val]) => `${key} ${val.join(' ')}`)
+    .join('; ');
+
   return new Response(`<!DOCTYPE html>${markup}`, {
     status: responseStatusCode,
     headers: {
       ...Object.fromEntries(responseHeaders),
       'Content-Type': 'text/html',
+      'Content-Security-Policy': csp,
     },
   });
 }

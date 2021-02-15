@@ -8,6 +8,7 @@ function useFathom() {
   React.useEffect(() => {
     Fathom.load(window.ENV.FATHOM_ANALYTICS, {
       includedDomains: ['resume.mcan.sh'],
+      url: 'kiwi.mcan.sh',
     });
   }, []);
 

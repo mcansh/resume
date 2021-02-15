@@ -16,11 +16,7 @@ export default function handleRequest(
   const cspSettings = {
     'default-src': ['none'],
     'style-src': ["'self'", "'unsafe-inline'"],
-    'script-src': [
-      "'self'",
-      "'unsafe-inline'",
-      'https://kiwi.mcan.sh/script.js',
-    ],
+    'script-src': ["'self'", "'unsafe-inline'", 'https://kiwi.mcan.sh'],
     'font-src': ["'self'"],
     'img-src': ["'self'", 'data:'],
   };

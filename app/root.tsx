@@ -1,9 +1,16 @@
 import * as React from 'react';
-import { Meta, Scripts, Styles, useRouteData } from '@remix-run/react';
+import type { LinksFunction } from '@remix-run/react';
+import { Meta, Scripts, Links, useRouteData } from '@remix-run/react';
 import { Outlet } from 'react-router-dom';
 import type { Loader } from '@remix-run/data';
+// eslint-disable-next-line import/extensions, import/no-unresolved
+import tailwindStyles from 'css:./styles/tailwind.css';
 
 import { useFathom } from './hooks/use-fathom';
+
+const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: tailwindStyles },
+];
 
 const loader: Loader = () => ({
   env: {
@@ -29,7 +36,7 @@ const App: React.VFC = () => {
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="mask-icon" href="/safari.svg" color="#4F46E5" />
         <Meta />
-        <Styles />
+        <Links />
       </head>
       <body>
         <Outlet />
@@ -66,7 +73,7 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="mask-icon" href="/safari.svg" color="#4F46E5" />
-        <Styles />
+        <Links />
       </head>
       <body className="grid p-4 mx-auto font-mono text-center text-white max-w-prose place-items-center bg-blue-screen">
         <div className="space-y-4">
@@ -93,4 +100,4 @@ const ErrorBoundary: React.VFC<ErrorBoundaryProps> = ({ error }) => {
 };
 
 export default App;
-export { loader, ErrorBoundary };
+export { links, loader, ErrorBoundary };

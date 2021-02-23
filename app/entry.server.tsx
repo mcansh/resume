@@ -18,7 +18,8 @@ export default function handleRequest(
     'style-src': ["'self'", "'unsafe-inline'"],
     'script-src': ["'self'", "'unsafe-inline'", 'https://kiwi.mcan.sh'],
     'font-src': ["'self'"],
-    'img-src': ["'self'", 'data:'],
+    'img-src': ["'self'", 'data:', 'https://kiwi.mcan.sh'],
+    'manifest-src': ["'self'"],
   };
 
   const csp = Object.entries(cspSettings)

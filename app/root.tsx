@@ -2,17 +2,16 @@ import * as React from 'react';
 import type { LinksFunction } from '@remix-run/react';
 import { Meta, Scripts, Links, useRouteData } from '@remix-run/react';
 import { Outlet } from 'react-router-dom';
-import type { Loader } from '@remix-run/data';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import tailwindStyles from 'css:./styles/tailwind.css';
+import type { LoaderFunction } from '@remix-run/node';
 
+import tailwindStyles from './styles/tailwind.css';
 import { useFathom } from './hooks/use-fathom';
 
 const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
 ];
 
-const loader: Loader = () => ({
+const loader: LoaderFunction = () => ({
   env: {
     FATHOM_ANALYTICS: process.env.FATHOM_ANALYTICS,
   },

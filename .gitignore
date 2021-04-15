@@ -6,9 +6,10 @@
 node_modules
 
 # build artifacts
-build
+server/build
 public/build
-app-build
+.cache
+app/styles/*
 
 # vercel
 .vercel

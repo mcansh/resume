@@ -1,4 +1,4 @@
-import type { MetaFunction } from '@remix-run/core';
+import type { MetaFunction } from '@remix-run/node';
 
 const meta: MetaFunction = () => ({ title: "Ain't nothing here" });
 

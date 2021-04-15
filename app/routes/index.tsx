@@ -1,9 +1,6 @@
 import * as React from 'react';
-import type { HeadersFunction, MetaFunction } from '@remix-run/core';
-import type { Loader } from '@remix-run/data';
+import type { HeadersFunction, MetaFunction, Loader } from '@remix-run/node';
 import { useRouteData } from '@remix-run/react';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import avatar from 'img:../11698668.jpg?srcset=128,160,256,320,384,480&quality=80&placeholder';
 
 const meta: MetaFunction = () => ({
   title: 'Resume | Logan McAnsh',
@@ -57,18 +54,12 @@ const IndexPage: React.VFC = () => {
       <div className="py-4 mx-auto max-w-prose">
         <header className="flex flex-col items-center px-4 pb-2 mb-2 space-x-4 space-y-1 text-center sm:flex-row sm:text-left">
           <div className="relative w-32 h-32 overflow-hidden rounded-full sm:w-40 sm:h-40">
-            <div
-              className="w-full h-full scale-125 bg-cover"
-              style={{
-                backgroundImage: `url(${avatar.placeholder})`,
-                filter: 'blur(8px)',
-              }}
-            />
+            <div className="w-full h-full scale-125 bg-cover" />
             <img
               alt="Logan McAnsh"
-              src={avatar.src}
-              height={avatar.height}
-              width={avatar.width}
+              src="/11698668.jpg"
+              height={160}
+              width={160}
               className="absolute top-0 left-0 w-full h-full"
             />
           </div>
